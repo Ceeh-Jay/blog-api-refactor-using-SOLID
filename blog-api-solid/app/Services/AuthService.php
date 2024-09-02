@@ -46,4 +46,9 @@ class AuthService
             'expires_in' => JWTAuth::factory()->getTTL() * 60
         ];
     }
+
+    //Method for accessing respondWithToken method
+    public function getTokenRespose($token){
+        return $this->respondWithToken($token);
+    }
 }

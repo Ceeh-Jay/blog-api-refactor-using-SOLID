@@ -42,7 +42,7 @@ class AuthController extends Controller
 
     public function refresh()
     {
-        $tokenResponse = $this->authService->respondWithToken(JWTAuth::refresh());
+        $tokenResponse = $this->authService->getTokenRespose(JWTAuth::refresh());
         return response()->json($tokenResponse);
     }
 }
